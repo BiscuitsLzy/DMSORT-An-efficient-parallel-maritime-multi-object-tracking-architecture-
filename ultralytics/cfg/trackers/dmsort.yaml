@@ -15,4 +15,4 @@ with_reid: True
 
 model_type: 'levit_256'
 feature_dim: 512
-model_path: "D:\\code\\yolo11\\improvement_yolov11\\ultralytics\\feature_asso\\experiments\\final_model.pth"
+model_path: ".\\feature_asso\\final_model.pth"
