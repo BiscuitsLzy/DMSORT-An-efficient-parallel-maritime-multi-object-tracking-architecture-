@@ -1,30 +1,30 @@
 # Maritime Multi-Object Tracking System
 
-This project is developed based on the BoT-SORT algorithm, combined with the designed RCDN detection method to achieve efficient multi-object tracking on the Singapore Maritime Dataset. The system supports independent training of detection models and ReID models, and introduces COFF strategy to optimize multi-modal feature fusion.
+This project DMSORT is developed based on the BoT-SORT algorithm, combined with the designed RCDN detection method to achieve efficient multi-object tracking on the Singapore Maritime Dataset. The system supports independent training of detection models and ReID models, and introduces COFF strategy to optimize multi-modal feature fusion.
 ## Maritime Multi-Object Tracking System
 
 First prepare the model weights, place the trained detection model weights (such as best.pt) in the project weights directory.
 
 Then configure the paths, modify the path parameters in `get_dmsort_mot.py`:
 
-# Detection model configuration (modify according to actual path)
+## Detection model configuration (modify according to actual path)
 model_cfg = "./ultralytics/cfg/models/11/RCDN.yaml"
 pretrained_weights = "./weights/best.pt"
 
-# Data input and output paths
+## Data input and output paths
 base_path = "./data/test" # Test data directory
 output_root = "./runs/mot/results" # Tracking result save directory
 
 Finally run the tracking system, execute the command: `get_dmsort_mot.py`
 
-## Model Training
+# Model Training
 
-### Detection Model Training
+## Detection Model Training
 
 First prepare the dataset, download the Singapore Maritime Dataset and convert it to YOLO format, then modify the dataset path in data.yml.
 Then start training, execute the command: `python train.py`
 
-### ReID Model Training
+## ReID Model Training
 
 First configure the dataset path, and edit the feature_asso/configs/litae.yaml file:
 root_dir: "./reid_dataset" # ReID format dataset path
