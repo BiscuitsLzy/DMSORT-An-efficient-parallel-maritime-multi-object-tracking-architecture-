@@ -1,0 +1,19 @@
+# path: /home/hjj/Desktop/dataset/dataset_visdrone/ dataset root dir
+train: C:\Users\vipuser\Desktop\merge_data\train\train\images # train images (relative to 'path')
+val: C:\Users\vipuser\Desktop\merge_data\val\val\images # val images (relative to 'path')
+test: C:\Users\vipuser\Desktop\merge_data\test\test\images # test images (optional)
+nc: 11
+
+names:
+  0: NaN
+  1: Ferry
+  2: Buoy
+  3: Vessel/ship
+  4: Speed boat
+  5: Boat
+  6: Kayak
+  7: Sail boat
+  8: Swimming person
+  9: Flying bird/plane
+  10: Other
+  

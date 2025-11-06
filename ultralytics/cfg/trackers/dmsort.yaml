@@ -1,0 +1,18 @@
+tracker_type: dmsort 
+track_high_thresh: 0.5 # threshold for the first association
+track_low_thresh: 0.1 # threshold for the second association
+new_track_thresh: 0.6 # threshold for init new track if the detection does not match any tracks
+track_buffer: 30 # buffer to calculate the time when to remove tracks
+match_thresh: 0.85 # threshold for matching tracks
+fuse_score: True # Whether to fuse confidence scores with the iou distances before matching
+
+
+# DMSORT settings
+gmc_method: sparseOptFlow # method of global motion compensation
+proximity_thresh: 0.5
+appearance_thresh: 0.25
+with_reid: True 
+
+model_type: 'levit_256'
+feature_dim: 512
+model_path: "D:\\code\\yolo11\\improvement_yolov11\\ultralytics\\feature_asso\\experiments\\final_model.pth"

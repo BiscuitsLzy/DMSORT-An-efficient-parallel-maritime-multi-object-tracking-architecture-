@@ -1,0 +1,26 @@
+# 数据集配置
+data:
+  root_dir: "C:\\Users\\vipuser\\Desktop\\datasets"  
+  image_size: 224  
+
+# 模型配置
+model:
+  name: 'litae'  
+  path: "basepath\\DMSORT\\feature_asso\\model\\levit_22m.bin"
+  type: 'levit_256'  
+  feature_dim: 512  
+  pretrained: False  
+
+train:
+  batch_size: 64
+  epochs: 200
+  lr: 1e-3
+  weight_decay: 1e-4
+  num_workers: 8  
+  max_invalid_ratio: 0.05  
+  warmup_epochs: 5  
+  unfreeze_epoch: 5
+  margin: 0.5
+sampler:
+  P: 4
+  K: 16
